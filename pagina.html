@@ -9,12 +9,26 @@
     <script>
 
 class Aluno {
-            constructor(nome, notaUm, notaDois) {
-                this.nome = nome;
-                this.notaUm = notaUm;
-                this.notaDois = notaDois;
+    constructor(nome, notaUm, notaDois) {
+        this.nome = nome;
+        this.notaUm = notaUm;
+        this.notaDois = notaDois;
+    }
+
+
+    calcularMedia(){
+        return (this.notaUm + this.notaDois) / 2;
+    }
+
+}  
+
+    class objFilho extends Aluno {
+        constructor(nome, notaUm, notaDois) {
+            super(nome, notaUm, notaDois);
             }
         }
+
+        const objFilho = new objFilho("João", 8, 7);
 
     </script>
 </body>
